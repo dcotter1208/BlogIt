@@ -9,6 +9,10 @@
 #import "DetailViewController.h"
 
 @interface DetailViewController ()
+@property (weak, nonatomic) IBOutlet UILabel *blogTitle;
+@property (weak, nonatomic) IBOutlet UILabel *authorName;
+@property (weak, nonatomic) IBOutlet UILabel *date;
+@property (weak, nonatomic) IBOutlet UITextView *body;
 
 @end
 
@@ -16,6 +20,13 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    NSString *formattedDate = [NSString stringWithFormat:@"%@", _blog.date];
+    
+    _blogTitle.text = _blog.title;
+    _authorName.text = _blog.authorName;
+    _date.text = formattedDate;
+    _body.text = _blog.postBody;
     
     NSLog(@"%@", _blog.title);
 }
