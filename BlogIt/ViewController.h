@@ -7,9 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "BlogPost.h"
 
 @interface ViewController : UIViewController
 
+@property(nonatomic, strong) NSMutableArray *blogs;
+@property(nonatomic, strong) BlogPost *blogPost;
 
 @end
 
