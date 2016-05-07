@@ -40,6 +40,7 @@
     
     _blogPost = _blogs[indexPath.row];
     cell.textLabel.text = _blogPost.title;
+    cell.detailTextLabel.text = _blogPost.authorName;
     
     return cell;
     
