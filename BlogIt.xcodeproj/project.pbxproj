@@ -13,6 +13,7 @@
 		C08CBF4A1CDE81D2003D708B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C08CBF481CDE81D2003D708B /* Main.storyboard */; };
 		C08CBF4C1CDE81D2003D708B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C08CBF4B1CDE81D2003D708B /* Assets.xcassets */; };
 		C08CBF4F1CDE81D2003D708B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C08CBF4D1CDE81D2003D708B /* LaunchScreen.storyboard */; };
+		C08CBF581CDE886F003D708B /* BlogPost.m in Sources */ = {isa = PBXBuildFile; fileRef = C08CBF571CDE886F003D708B /* BlogPost.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,8 @@
 		C08CBF4B1CDE81D2003D708B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C08CBF4E1CDE81D2003D708B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C08CBF501CDE81D2003D708B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C08CBF561CDE886F003D708B /* BlogPost.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BlogPost.h; sourceTree = "<group>"; };
+		C08CBF571CDE886F003D708B /* BlogPost.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BlogPost.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +65,8 @@
 				C08CBF431CDE81D2003D708B /* AppDelegate.m */,
 				C08CBF451CDE81D2003D708B /* ViewController.h */,
 				C08CBF461CDE81D2003D708B /* ViewController.m */,
+				C08CBF561CDE886F003D708B /* BlogPost.h */,
+				C08CBF571CDE886F003D708B /* BlogPost.m */,
 				C08CBF481CDE81D2003D708B /* Main.storyboard */,
 				C08CBF4B1CDE81D2003D708B /* Assets.xcassets */,
 				C08CBF4D1CDE81D2003D708B /* LaunchScreen.storyboard */,
@@ -152,6 +157,7 @@
 				C08CBF471CDE81D2003D708B /* ViewController.m in Sources */,
 				C08CBF441CDE81D2003D708B /* AppDelegate.m in Sources */,
 				C08CBF411CDE81D2003D708B /* main.m in Sources */,
+				C08CBF581CDE886F003D708B /* BlogPost.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
