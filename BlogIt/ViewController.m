@@ -7,8 +7,10 @@
 //
 
 #import "ViewController.h"
+#import "DetailViewController.h"
 
 @interface ViewController () <UITableViewDelegate, UITableViewDataSource>
+@property (strong, nonatomic) IBOutlet UITableView *blogTableView;
 
 @end
 
@@ -20,8 +22,8 @@
     NSDate *date = [NSDate date];
     
     _blogs = [NSMutableArray array];
-    _blogPost = [BlogPost initWithBlogTitle:@"Blog One" authorName:@"Brandon" postBody:@"Yay!" date:date];
-    [_blogs addObject:_blogPost];
+    BlogPost *postOne = [BlogPost initWithBlogTitle:@"Blog One" authorName:@"Brandon" postBody:@"Yay!" date:date];
+    [_blogs addObject:postOne];
     
 }
 
@@ -45,6 +47,14 @@
     return cell;
     
     
+}
+
+-(void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    DetailViewController *destinationViewController = (DetailViewController *)segue.destinationViewController;
+    
+    NSIndexPath *indexPath = [_blogTableView indexPathForSelectedRow];
+    
+    destinationViewController.blog = [_blogs objectAtIndex:indexPath.row];
 }
 
 @end

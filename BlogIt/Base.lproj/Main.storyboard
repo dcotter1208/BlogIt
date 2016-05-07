@@ -25,7 +25,7 @@
                                         <rect key="frame" x="0.0" y="92" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="1wD-Vh-qeN" id="XZE-a5-VRm">
-                                            <rect key="frame" x="0.0" y="0.0" width="567" height="43"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="567" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                         <connections>
@@ -50,15 +50,18 @@
                     <navigationItem key="navigationItem" id="VDq-FE-Yfo">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="zvv-6s-762"/>
                     </navigationItem>
+                    <connections>
+                        <outlet property="blogTableView" destination="kuM-5J-hAE" id="zjq-Hn-ML5"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="494" y="403"/>
         </scene>
-        <!--View Controller-->
+        <!--Detail View Controller-->
         <scene sceneID="IUt-g2-2kX">
             <objects>
-                <viewController id="j1c-0u-znp" sceneMemberID="viewController">
+                <viewController id="j1c-0u-znp" customClass="DetailViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="5oY-0G-ISn"/>
                         <viewControllerLayoutGuide type="bottom" id="VIm-zS-nnH"/>
