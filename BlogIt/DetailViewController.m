@@ -15,15 +15,13 @@
 @property (weak, nonatomic) IBOutlet UITextView *body;
 @property (weak, nonatomic) IBOutlet UIButton *editButton;
 
-
-
 @end
 
 @implementation DetailViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+
     NSString *formattedDate = [NSString stringWithFormat:@"%@", _blog.date];
     
     _blogTitle.text = _blog.title;
@@ -47,18 +45,16 @@
     return newBlog;
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 - (IBAction)saveBlog:(id)sender {
     BlogPost *newBlogPost = [self createBlogPost];
     [_delegate addBlogToArray:newBlogPost];
 }
+
+- (IBAction)editButton:(id)sender {
+    [_blogTitle setUserInteractionEnabled:YES];
+    [_authorName setUserInteractionEnabled:YES];
+    [_body setEditable:YES];
+}
+
 
 @end

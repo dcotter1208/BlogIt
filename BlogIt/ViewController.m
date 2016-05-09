@@ -60,14 +60,13 @@
 
 -(void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     DetailViewController *destinationViewController = (DetailViewController *)segue.destinationViewController;
-    
+    [destinationViewController setDelegate:self];
     if ([segue.identifier isEqualToString:@"viewPost"]) {
         NSLog(@"Segue is %@", segue.identifier);
         NSIndexPath *indexPath = [_blogTableView indexPathForSelectedRow];
         destinationViewController.blog = [_blogs objectAtIndex:indexPath.row];
     } else {
         destinationViewController.blog = nil;
-        [destinationViewController setDelegate:self];
     }
     
     
