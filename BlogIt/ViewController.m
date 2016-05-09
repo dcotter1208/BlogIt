@@ -19,11 +19,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    NSDate *date = [NSDate date];
-    
     _blogs = [NSMutableArray array];
-    BlogPost *postOne = [BlogPost initWithBlogTitle:@"Blog One" authorName:@"Brandon" postBody:@"Yay!" date:date];
-    [_blogs addObject:postOne];
     
 }
 
@@ -55,6 +51,14 @@
     
     return cell;
     
+}
+
+-(void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    if (editingStyle == UITableViewCellEditingStyleDelete) {
+        [_blogs removeObjectAtIndex:indexPath.row];
+        [_blogTableView reloadData];
+    }
     
 }
 

@@ -10,7 +10,7 @@
 
 @implementation BlogPost
 
--(id)initWithBlogTitle:(NSString *)title authorName:(NSString *)authorName postBody:(NSString *)postBody date:(NSDate *)date {
+-(id)initWithBlogTitle:(NSString *)title authorName:(NSString *)authorName postBody:(NSString *)postBody date:(NSDate *)date blogID:(NSString *)blogID {
     self = [super init];
     
     if (self) {
@@ -18,13 +18,14 @@
         _authorName = authorName;
         _postBody = postBody;
         _date = date;
+        _blogID = blogID;
     }
     
     return self;
 }
 
-+(id)initWithBlogTitle:(NSString *)title authorName:(NSString *)authorName postBody:(NSString *)postBody date:(NSDate *)date {
-    return [[self alloc]initWithBlogTitle:title authorName:authorName postBody:postBody date:date];
++(id)initWithBlogTitle:(NSString *)title authorName:(NSString *)authorName postBody:(NSString *)postBody date:(NSDate *)date blogID:(NSString *)blogID {
+    return [[self alloc]initWithBlogTitle:title authorName:authorName postBody:postBody date:date blogID: blogID];
 }
 
 @end

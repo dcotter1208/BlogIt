@@ -39,8 +39,9 @@
 
 -(BlogPost *)createBlogPost {
     NSDate *pubDate = [NSDate date];
-    BlogPost *newBlog = [BlogPost initWithBlogTitle:_blogTitle.text authorName:_authorName.text postBody:_body.text date:pubDate];
-    NSLog(@"New blog post info:\nTitle: %@\nAuthor: %@\nDate: %@\nBody: %@", newBlog.title, newBlog.authorName, newBlog.date, newBlog.postBody);
+    NSString *blogID = [[NSUUID UUID] UUIDString];
+    BlogPost *newBlog = [BlogPost initWithBlogTitle:_blogTitle.text authorName:_authorName.text postBody:_body.text date:pubDate blogID:blogID];
+    NSLog(@"New blog post info:\nTitle: %@\nAuthor: %@\nDate: %@\nBody: %@ \nID:%@", newBlog.title, newBlog.authorName, newBlog.date, newBlog.postBody, newBlog.blogID);
     
     return newBlog;
 }
