@@ -32,6 +32,15 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (void)viewWillAppear:(BOOL)animated {
+    [_blogTableView reloadData];
+}
+
+- (void)addBlogToArray:(BlogPost *)blogToPass {
+    [_blogs addObject:blogToPass];
+    NSLog(@"%lu", _blogs.count);
+}
+
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     return _blogs.count;
 }
@@ -52,9 +61,16 @@
 -(void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     DetailViewController *destinationViewController = (DetailViewController *)segue.destinationViewController;
     
-    NSIndexPath *indexPath = [_blogTableView indexPathForSelectedRow];
+    if ([segue.identifier isEqualToString:@"viewPost"]) {
+        NSLog(@"Segue is %@", segue.identifier);
+        NSIndexPath *indexPath = [_blogTableView indexPathForSelectedRow];
+        destinationViewController.blog = [_blogs objectAtIndex:indexPath.row];
+    } else {
+        destinationViewController.blog = nil;
+        [destinationViewController setDelegate:self];
+    }
     
-    destinationViewController.blog = [_blogs objectAtIndex:indexPath.row];
+    
 }
 
 @end

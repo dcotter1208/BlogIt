@@ -9,9 +9,18 @@
 #import <UIKit/UIKit.h>
 #import "BlogPost.h"
 
+@protocol AddBlogToArrayDelegate <NSObject>
+
+- (void)addBlogToArray:(BlogPost *)blogToPass;
+
+@end
+
 @interface DetailViewController : UIViewController
 
 @property(nonatomic, strong) BlogPost *blog;
+@property(nonatomic, weak) id<AddBlogToArrayDelegate>delegate;
+
+- (BlogPost *)createBlogPost;
 
 
 @end
