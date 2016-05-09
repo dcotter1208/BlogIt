@@ -8,8 +8,9 @@
 
 #import <UIKit/UIKit.h>
 #import "BlogPost.h"
+#import "DetailViewController.h"
 
-@interface ViewController : UIViewController
+@interface ViewController : UIViewController <AddBlogToArrayDelegate>
 
 @property(nonatomic, strong) NSMutableArray *blogs;
 @property(nonatomic, strong) BlogPost *blogPost;
