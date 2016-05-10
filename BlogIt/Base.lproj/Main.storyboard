@@ -48,9 +48,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="VDq-FE-Yfo">
-                        <barButtonItem key="leftBarButtonItem" title="Networking" id="1pT-g1-5uR">
+                        <barButtonItem key="leftBarButtonItem" title="Item" id="YdK-di-hXh">
                             <connections>
-                                <segue destination="MV4-2r-j9B" kind="push" id="rRo-fv-wXe"/>
+                                <segue destination="jif-dg-RQt" kind="push" id="CcV-iy-UKJ"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="zvv-6s-762">
@@ -66,6 +66,25 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-337" y="349"/>
+        </scene>
+        <!--URL RequestVC-->
+        <scene sceneID="8xN-95-FqJ">
+            <objects>
+                <viewController id="jif-dg-RQt" customClass="NSURLRequestVC" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="bgE-fo-bwl"/>
+                        <viewControllerLayoutGuide type="bottom" id="TZH-Va-UY9"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="HcT-lu-rmZ">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="q6r-AK-WrB"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yDE-SY-4uJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-237" y="-391"/>
         </scene>
         <!--Detail View Controller-->
         <scene sceneID="IUt-g2-2kX">
@@ -132,25 +151,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="b8B-jY-g19" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="133" y="39"/>
-        </scene>
-        <!--NetworkingVC-->
-        <scene sceneID="ckr-6z-bLw">
-            <objects>
-                <viewController id="MV4-2r-j9B" customClass="NetworkingVC" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="WLU-Xe-xzT"/>
-                        <viewControllerLayoutGuide type="bottom" id="xlV-Er-dZe"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="azM-Nt-mDW">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="4ah-ra-tBB"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="tTj-sx-c5l" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="133" y="684"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="LZp-Wu-PZq">
