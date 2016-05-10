@@ -1,5 +1,5 @@
 //
-//  NetworkingVC.h
+//  NSURLRequestVC.h
 //  BlogIt
 //
 //  Created by Donovan Cotter on 5/10/16.
@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface NetworkingVC : UIViewController
+@interface NSURLRequestVC : UIViewController
+
 
 @end

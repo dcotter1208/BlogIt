@@ -74,15 +74,19 @@
 
 -(void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     DetailViewController *destinationViewController = (DetailViewController *)segue.destinationViewController;
-    [destinationViewController setDelegate:self];
     
     if ([segue.identifier isEqualToString:@"viewPost"]) {
         
+        [destinationViewController setDelegate:self];
         NSIndexPath *indexPath = [_blogTableView indexPathForSelectedRow];
         _blogPost = [_blogs objectAtIndex:indexPath.row];
         destinationViewController.blog = _blogPost;
-    } else {
+        
+    } else if ([segue.identifier isEqualToString:@"addNewPost"]) {
+        
+        [destinationViewController setDelegate:self];
         destinationViewController.blog = nil;
+        
     }
     
     
