@@ -29,7 +29,8 @@
     _date.text = [NSString stringWithFormat:@"Date: %@", formattedDate];
     _body.text = _blog.postBody;
     
-    NSLog(@"%@", _blog.title);
+    NSLog(@"%@", _blog.blogID);
+    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -38,12 +39,17 @@
 }
 
 -(BlogPost *)createBlogPost {
-    NSDate *pubDate = [NSDate date];
-    NSString *blogID = [[NSUUID UUID] UUIDString];
-    BlogPost *newBlog = [BlogPost initWithBlogTitle:_blogTitle.text authorName:_authorName.text postBody:_body.text date:pubDate blogID:blogID];
-    NSLog(@"New blog post info:\nTitle: %@\nAuthor: %@\nDate: %@\nBody: %@ \nID:%@", newBlog.title, newBlog.authorName, newBlog.date, newBlog.postBody, newBlog.blogID);
-    
-    return newBlog;
+
+    if (_blog == nil) {
+        NSDate *pubDate = [NSDate date];
+        NSString *blogID = [[NSUUID UUID]UUIDString];
+        _blog = [BlogPost initWithBlogTitle:_blogTitle.text authorName:_authorName.text postBody:_body.text date:pubDate blogID:blogID];
+        NSLog(@"New blog post info:\nTitle: %@\nAuthor: %@\nDate: %@\nBody: %@ \nID:%@", _blog.title, _blog.authorName, _blog.date, _blog.postBody, _blog.blogID);
+    } else {
+        _blog = [BlogPost initWithBlogTitle:_blogTitle.text authorName:_authorName.text postBody:_body.text date:_blog.date blogID:_blog.blogID];
+    }
+
+    return _blog;
 }
 
 - (IBAction)saveBlog:(id)sender {
@@ -56,6 +62,7 @@
     [_authorName setUserInteractionEnabled:YES];
     [_body setEditable:YES];
 }
+
 
 
 @end

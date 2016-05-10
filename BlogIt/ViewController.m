@@ -20,7 +20,7 @@
     [super viewDidLoad];
     
     _blogs = [NSMutableArray array];
-    
+
 }
 
 - (void)didReceiveMemoryWarning {
@@ -29,12 +29,23 @@
 }
 
 - (void)viewWillAppear:(BOOL)animated {
+    
     [_blogTableView reloadData];
 }
 
 - (void)addBlogToArray:(BlogPost *)blogToPass {
+    
+    NSMutableArray *postsToUpdate = [NSMutableArray array];
+    
+    for (BlogPost *blog in _blogs) {
+        if ([blog.blogID isEqualToString:blogToPass.blogID]) {
+            [postsToUpdate addObject:blog];
+        }
+    }
+    
+    [_blogs removeObjectsInArray:postsToUpdate];
     [_blogs addObject:blogToPass];
-    NSLog(@"%lu", _blogs.count);
+
 }
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
@@ -45,9 +56,9 @@
 
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell" forIndexPath:indexPath];
     
-    _blogPost = _blogs[indexPath.row];
-    cell.textLabel.text = _blogPost.title;
-    cell.detailTextLabel.text = _blogPost.authorName;
+    BlogPost *post = _blogs[indexPath.row];
+    cell.textLabel.text = post.title;
+    cell.detailTextLabel.text = post.authorName;
     
     return cell;
     
@@ -59,16 +70,17 @@
         [_blogs removeObjectAtIndex:indexPath.row];
         [_blogTableView reloadData];
     }
-    
 }
 
 -(void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     DetailViewController *destinationViewController = (DetailViewController *)segue.destinationViewController;
     [destinationViewController setDelegate:self];
+    
     if ([segue.identifier isEqualToString:@"viewPost"]) {
-        NSLog(@"Segue is %@", segue.identifier);
+        
         NSIndexPath *indexPath = [_blogTableView indexPathForSelectedRow];
-        destinationViewController.blog = [_blogs objectAtIndex:indexPath.row];
+        _blogPost = [_blogs objectAtIndex:indexPath.row];
+        destinationViewController.blog = _blogPost;
     } else {
         destinationViewController.blog = nil;
     }
