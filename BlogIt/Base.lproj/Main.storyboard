@@ -48,6 +48,11 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="VDq-FE-Yfo">
+                        <barButtonItem key="leftBarButtonItem" title="Networking" id="1pT-g1-5uR">
+                            <connections>
+                                <segue destination="MV4-2r-j9B" kind="push" id="rRo-fv-wXe"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="zvv-6s-762">
                             <connections>
                                 <segue destination="j1c-0u-znp" kind="push" identifier="addNewPost" id="8IS-oT-MZu"/>
@@ -60,7 +65,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="263.46666666666664" y="381.50666666666666"/>
+            <point key="canvasLocation" x="-337" y="349"/>
         </scene>
         <!--Detail View Controller-->
         <scene sceneID="IUt-g2-2kX">
@@ -126,7 +131,26 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="b8B-jY-g19" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="635" y="381"/>
+            <point key="canvasLocation" x="133" y="39"/>
+        </scene>
+        <!--NetworkingVC-->
+        <scene sceneID="ckr-6z-bLw">
+            <objects>
+                <viewController id="MV4-2r-j9B" customClass="NetworkingVC" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="WLU-Xe-xzT"/>
+                        <viewControllerLayoutGuide type="bottom" id="xlV-Er-dZe"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="azM-Nt-mDW">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="4ah-ra-tBB"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tTj-sx-c5l" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="133" y="684"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="LZp-Wu-PZq">
@@ -144,10 +168,10 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Wau-eK-qeI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-125.86666666666666" y="380.56"/>
+            <point key="canvasLocation" x="-726" y="348"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="39w-W4-gjp"/>
+        <segue reference="8IS-oT-MZu"/>
     </inferredMetricsTieBreakers>
 </document>

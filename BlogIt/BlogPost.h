@@ -14,8 +14,9 @@
 @property(nonatomic, strong) NSString *authorName;
 @property(nonatomic, strong) NSString *postBody;
 @property(nonatomic, strong) NSDate *date;
+@property(nonatomic, strong) NSString *blogID;
 
--(id)initWithBlogTitle:(NSString *)title authorName:(NSString *)authorName postBody:(NSString *)postBody date:(NSDate *)date;
-+(id)initWithBlogTitle:(NSString *)title authorName:(NSString *)authorName postBody:(NSString *)postBody date:(NSDate *)date;
+-(id)initWithBlogTitle:(NSString *)title authorName:(NSString *)authorName postBody:(NSString *)postBody date:(NSDate *)date blogID:(NSString *)blogID;
++(id)initWithBlogTitle:(NSString *)title authorName:(NSString *)authorName postBody:(NSString *)postBody date:(NSDate *)date blogID:(NSString *)blogID;
 
 @end

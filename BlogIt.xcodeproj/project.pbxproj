@@ -15,6 +15,7 @@
 		C08CBF4C1CDE81D2003D708B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C08CBF4B1CDE81D2003D708B /* Assets.xcassets */; };
 		C08CBF4F1CDE81D2003D708B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C08CBF4D1CDE81D2003D708B /* LaunchScreen.storyboard */; };
 		C08CBF581CDE886F003D708B /* BlogPost.m in Sources */ = {isa = PBXBuildFile; fileRef = C08CBF571CDE886F003D708B /* BlogPost.m */; };
+		C0A08D201CE28D7100A59A26 /* NetworkingVC.m in Sources */ = {isa = PBXBuildFile; fileRef = C0A08D1F1CE28D7100A59A26 /* NetworkingVC.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,8 @@
 		C08CBF501CDE81D2003D708B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C08CBF561CDE886F003D708B /* BlogPost.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BlogPost.h; sourceTree = "<group>"; };
 		C08CBF571CDE886F003D708B /* BlogPost.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BlogPost.m; sourceTree = "<group>"; };
+		C0A08D1E1CE28D7100A59A26 /* NetworkingVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetworkingVC.h; sourceTree = "<group>"; };
+		C0A08D1F1CE28D7100A59A26 /* NetworkingVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetworkingVC.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +73,8 @@
 				C08CBF461CDE81D2003D708B /* ViewController.m */,
 				943A18761CDE96F40049DED3 /* DetailViewController.h */,
 				943A18771CDE96F40049DED3 /* DetailViewController.m */,
+				C0A08D1E1CE28D7100A59A26 /* NetworkingVC.h */,
+				C0A08D1F1CE28D7100A59A26 /* NetworkingVC.m */,
 				C08CBF561CDE886F003D708B /* BlogPost.h */,
 				C08CBF571CDE886F003D708B /* BlogPost.m */,
 				C08CBF481CDE81D2003D708B /* Main.storyboard */,
@@ -159,6 +164,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C0A08D201CE28D7100A59A26 /* NetworkingVC.m in Sources */,
 				943A18781CDE96F40049DED3 /* DetailViewController.m in Sources */,
 				C08CBF471CDE81D2003D708B /* ViewController.m in Sources */,
 				C08CBF441CDE81D2003D708B /* AppDelegate.m in Sources */,
