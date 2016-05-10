@@ -37,6 +37,17 @@
     NSLog(@"%lu", _blogs.count);
 }
 
+- (void)updateBlogInArray:(BlogPost *)blogToUpdate {
+    for (BlogPost* blog in _blogs) {
+        NSLog(@"updateBlogInArray is firing. ID is: %@", blog.blogID);
+        if (blog.blogID == blogToUpdate.blogID) {
+            blogToUpdate.title = blog.title;
+            blogToUpdate.authorName = blog.authorName;
+            blogToUpdate.postBody = blog.postBody;
+        }
+    }
+}
+
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     return _blogs.count;
 }

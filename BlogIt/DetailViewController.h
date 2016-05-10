@@ -12,6 +12,7 @@
 @protocol AddBlogToArrayDelegate <NSObject>
 
 - (void)addBlogToArray:(BlogPost *)blogToPass;
+- (void)updateBlogInArray: (BlogPost *)blogToUpdate;
 
 @end
 

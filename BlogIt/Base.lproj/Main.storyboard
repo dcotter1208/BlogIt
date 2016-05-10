@@ -25,7 +25,7 @@
                                         <rect key="frame" x="0.0" y="92" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="1wD-Vh-qeN" id="XZE-a5-VRm">
-                                            <rect key="frame" x="0.0" y="0.0" width="287" height="43"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="287" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                         <connections>
@@ -108,6 +108,13 @@
                                 <state key="normal" title="Save"/>
                                 <connections>
                                     <action selector="saveBlog:" destination="j1c-0u-znp" eventType="touchUpInside" id="XjQ-f6-aUr"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6p4-QA-c9H">
+                                <rect key="frame" x="136" y="72" width="46" height="30"/>
+                                <state key="normal" title="Done"/>
+                                <connections>
+                                    <action selector="doneEditingButton:" destination="j1c-0u-znp" eventType="touchUpInside" id="6XJ-CP-nQU"/>
                                 </connections>
                             </button>
                         </subviews>

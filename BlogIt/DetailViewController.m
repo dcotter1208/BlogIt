@@ -56,6 +56,12 @@
     [_authorName setUserInteractionEnabled:YES];
     [_body setEditable:YES];
 }
+- (IBAction)doneEditingButton:(id)sender {
+    [_blogTitle setUserInteractionEnabled:NO];
+    [_authorName setUserInteractionEnabled:NO];
+    [_body setEditable:NO];
+    [_delegate updateBlogInArray:_blog];
+}
 
 
 @end
